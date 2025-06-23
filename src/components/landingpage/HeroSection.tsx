@@ -1,5 +1,5 @@
 // Make sure to adjust your import paths if they are different
-import DiagonalShape from "./hero/DiagonalShape";
+import DiagonalShape from "./hero/HeroDiagonalShape";
 import HeroContent from "./hero/HeroContent";
 import HeroBackground from "./hero/HeroBackground";
 import { FlipWords } from "@/components/ui/flip-words"; // 1. IMPORT FlipWords
@@ -36,10 +36,10 @@ const HeroSection = () => {
 
       {/* This container holds the overlay elements */}
       <div className="absolute top-0 left-0 h-full w-full">
-        <div className="hidden lg:block absolute inset-0 md:w-3/5 z-40">
+        <div className="hidden lg:block absolute inset-0 lg:w-3/5 z-40">
           <DiagonalShape />
         </div>
-        <div className="relative h-full md:w-3/5 lg:z-50">
+        <div className="relative h-full lg:w-3/5 lg:z-50">
           <HeroContent />
         </div>
       </div>
