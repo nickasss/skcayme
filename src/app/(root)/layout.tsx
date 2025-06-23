@@ -10,26 +10,26 @@ export default function RootLayout({
 }) {
   return (
     <main>
-      {/* The Navbar component (black bar with links on the right) */}
       <Navbar />
 
-      {/* 👇 THIS IS THE NEW, SEPARATE LOGO COMPONENT */}
-      {/* It's positioned absolutely and given the highest z-index */}
-      <div className="fixed top-0 left-0 px-8 mt-2 z-[51]">
-        <Link href="/">
+      {/* 👇 MODIFY THIS DIV 👇 */}
+      <div className="fixed top-0 left-0 mx-8 mt-2 z-[51]"> {/* Use margin for spacing */}
+        <Link 
+          href="/"
+          // Add classes to the Link tag itself for the background and padding
+          className="block bg-white/80 p-1 rounded-md shadow-lg"
+        >
           <Image
-            src="/Logo.png" // Make sure you have your logo in the public folder
+            src="/Logo.png"
             alt="SKCayme Logo"
-            width={40} // Adjust size as needed
+            width={40}
             height={40}
-            className="w-10 h-10" // Adjust size as needed
+            className="w-10 h-10"
           />
         </Link>
       </div>
 
-      {/* The rest of your page content */}
       {children}
-      
       <Footer />
     </main>
   );

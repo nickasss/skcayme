@@ -19,8 +19,9 @@ const Navbar = () => {
       <nav className="bg-[#070707] shadow-md px-4 lg:px-8 sticky top-0 z-40">
         <div className="mx-auto">
           <div className="flex items-center justify-end h-16">
-            {/* Desktop Navigation Links */}
-            <div className="hidden md:flex md:items-center md:space-x-4">
+            
+            {/* 1. Desktop Navigation Links: Changed `md:` to `lg:` */}
+            <div className="hidden lg:flex lg:items-center lg:space-x-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -32,8 +33,8 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Mobile Menu Button (Hamburger) */}
-            <div className="md:hidden flex items-center">
+            {/* 2. Mobile Menu Button (Hamburger): Changed `md:` to `lg:` */}
+            <div className="lg:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(true)} // Open the menu
                 className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-neutral-800 focus:outline-none"
@@ -44,22 +45,23 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
+            
           </div>
         </div>
       </nav>
 
       {/* --- Mobile Slide-in Menu --- */}
-      {/* 1. Menu Overlay */}
+      {/* 3. Menu Overlay: Changed `md:` to `lg:` */}
       <div
-        className={`fixed inset-0 bg-black/50 z-[99] transition-opacity duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 bg-black/50 z-[99] transition-opacity duration-300 ease-in-out lg:hidden ${
           isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsMenuOpen(false)} // Close menu on overlay click
       />
 
-      {/* 2. Menu Panel */}
+      {/* 4. Menu Panel: Changed `md:` to `lg:` */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/5 max-w-sm bg-[#070707] shadow-xl z-[100] transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 h-full w-3/5 max-w-sm bg-[#070707] shadow-xl z-[100] transition-transform duration-300 ease-in-out lg:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

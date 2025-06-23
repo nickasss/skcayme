@@ -1,4 +1,4 @@
-const DiagonalShape = () => {
+const HeroDiagonalShape = () => {
   return (
     // This div is ONLY responsible for drawing the shape.
     // It has no content inside.
@@ -8,4 +8,4 @@ const DiagonalShape = () => {
   );
 };
 
-export default DiagonalShape;
+export default HeroDiagonalShape;
