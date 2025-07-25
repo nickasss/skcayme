@@ -1,11 +1,12 @@
-"use client";
+"use client"; // If any of your components use client-side hooks
 
+import WorksContent from "@/components/works/WorksContent";
 import React from "react";
 
 const WorksPage = () => {
   return (
-    <div className="flex flex-col w-full min-h-screen lg:h-screen ">
-      <p>Works Page</p>
+    <div>
+      <WorksContent />
     </div>
   );
 };

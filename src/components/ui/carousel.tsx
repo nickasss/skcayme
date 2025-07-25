@@ -138,13 +138,13 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <button
-      className={`w-20 h-20 flex items-center mx-16 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-red-700 focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+      className={`w-20 h-20 flex items-center mx-4 gap-4 mt-8 lg:mt-0 lg:mx-16 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-red-700 focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
         type === "previous" ? "rotate-180" : ""
       }`}
       title={title}
       onClick={handleClick}
     >
-      <IconArrowNarrowRight className="text-[#070707] dark:text-neutral-200" />
+      <IconArrowNarrowRight size={45} className="text-[#070707] dark:text-neutral-200" />
     </button>
   );
 };
@@ -196,7 +196,7 @@ export function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
 
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
+      <div className="absolute gap-4 flex justify-center w-full top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"

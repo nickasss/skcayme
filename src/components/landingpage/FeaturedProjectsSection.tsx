@@ -3,29 +3,9 @@ import SectionBackground from "./SectionBackground";
 // Import the Carousel from the UI component file we just created
 import { Carousel } from "@/components/ui/carousel";
 
-// 1. Define the data for your project slides
-const projectsData = [
-  {
-    title: "Modern Residential Home",
-    button: "View Project",
-    src: "/images/project-1.jpg", 
-  },
-  {
-    title: "Urban Commercial Complex",
-    button: "View Project",
-    src: "/images/project-2.jpg",
-  },
-  {
-    title: "Sustainable Community Hub",
-    button: "View Project",
-    src: "/images/project-3.jpg",
-  },
-  {
-    title: "Minimalist Interior Design",
-    button: "View Project",
-    src: "/images/project-4.jpg",
-  },
-];
+import { allProjects } from "@/data/projects"
+
+const featuredProjects = allProjects.slice(0, 4);
 
 const FeaturedProjectsSection = () => {
   return (
@@ -49,7 +29,7 @@ const FeaturedProjectsSection = () => {
           </h2>
         </div>
 
-        <Carousel slides={projectsData} />
+        <Carousel slides={featuredProjects} />
       </div>
     </section>
   );
