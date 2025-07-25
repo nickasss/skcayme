@@ -8,8 +8,6 @@ import React from "react";
 
 const LandingPage = () => {
   return (
-    // 1. REMOVED the `flex`, `flex-col`, and `h-screen` classes.
-    // This div is now just a simple container that allows natural scrolling.
     <div>
       <HeroSection />
       <AboutLandingPage />
