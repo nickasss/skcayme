@@ -98,6 +98,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             }}
             alt={title}
             src={src}
+            fill
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"

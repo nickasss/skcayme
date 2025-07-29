@@ -9,18 +9,12 @@ const featuredProjects = allProjects.slice(0, 4);
 
 const FeaturedProjectsSection = () => {
   return (
-    // The parent <section> has a minimum height and margin. This is correct.
     <section className="relative min-h-screen overflow-hidden py-24">
       
-      {/* The background component. We removed `className="h-full"`. */}
-      {/* We added back the overlay for text readability. */}
       <SectionBackground
         imageUrl="/BackgroundPicture.png"
         overlayClassName="bg-black/85" 
       />
-
-      {/* The main content container. */}
-      {/* It sits on a higher layer (z-10) and now has its own padding (`py-24`). */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 py-24">
         
         <div className="mb-8 text-center">
